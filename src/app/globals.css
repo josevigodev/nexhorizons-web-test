@@ -1,0 +1,106 @@
+@import 'tailwindcss';
+
+* {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #3498db;
+  --complementary: #ffd659;
+  --on-primary: #ffffff;
+  --background: #ffffff;
+  --secondary-background: #e0f0fa;
+  --tertiary-background: #040e2f;
+  --text-primary: #000000;
+  --text-secondary: #4b5563;
+  --text-tertiary: #99a1af;
+  --border: #e0e0e0;
+}
+
+/**/
+/* @media (prefers-color-scheme: dark) { */
+/*   :root { */
+/*     --background: #0a0a0a; */
+/*     --foreground: #ededed; */
+/*   } */
+/* } */
+
+@theme inline {
+  /* Colors */
+  --color-primary: var(--primary);
+  --color-complementary: var(--complementary);
+  --color-on-primary: var(--on-primary);
+  --color-background: var(--background);
+  --color-secondary-background: var(--secondary-background);
+  --color-tertiary-background: var(--tertiary-background);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-border: var(--border);
+  --breakpoint-xs: 30rem;
+
+  --text-xs: 0.75rem;
+  --text-2xs: 10px;
+  --font-sans: var(--font-montserrat);
+  --font-heading: var(--font-nourd);
+
+  --container-primary-max-width: 75rem;
+  --container-secondary-max-width: 72rem;
+  --container-tertiary-max-width: 64rem;
+  --container-quaternary-max-width: 56rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.box-shadow {
+  box-shadow: 0 0 30px #ffffff55;
+}
+
+.open-navbar-button {
+  animation: slide-down 1s ease-out alternate infinite;
+}
+
+.open-navbar-button::before {
+  width: 50%;
+  height: 50%;
+  content: '';
+  background-color: #efca1155;
+  position: absolute;
+  top: 10;
+  left: 10;
+  border-radius: 9999;
+  opacity: 0.8;
+  animation: expand 3s ease-out infinite;
+}
+
+.open-navbar-button::after {
+  width: 40%;
+  height: 40%;
+  content: '';
+  background-color: #ffd5008f;
+  position: absolute;
+  top: 12;
+  left: 12;
+  border-radius: 9999;
+  opacity: 0.8;
+  animation: expand 2s ease-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes expand {
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
