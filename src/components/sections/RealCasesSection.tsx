@@ -29,7 +29,7 @@ const categories = [
 
 type CategoryKey = (typeof categories)[number]['key']
 
-type RealCaseItem = {
+export type RealCaseItem = {
   id: number
   mainTag: string
   title: string

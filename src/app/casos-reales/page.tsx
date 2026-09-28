@@ -1,11 +1,14 @@
 import { RealCasesHero } from '@/components/sections/RealCasesHero'
-import { RealCasesSection } from '@/components/sections/RealCasesSection'
+import {
+  RealCasesSection,
+  type RealCaseItem
+} from '@/components/sections/RealCasesSection'
 import Link from 'next/link'
 import { ArrowIcon } from '../../components/common/Icons'
 import { ReusableValidation } from '@/components/sections/ReusableValidation'
 import { ProjectNextStep } from '@/components/sections/ProjectNextStep'
 
-const realCases = [
+const realCases: RealCaseItem[] = [
   {
     id: 0,
     category: 'nativeAppsAndSasS',
